@@ -13,6 +13,7 @@ RUN if [ ! -d .git ]; then \
         git init -q && \
         git config user.email "build@render.com" && \
         git config user.name "render build" && \
+        git remote add origin https://github.com/imputnet/cobalt.git && \
         git add -A && \
         git commit -q -m "render build" --allow-empty; \
     fi
